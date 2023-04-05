@@ -1,0 +1,93 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Robot", sans-serif;
+}
+
+.main-container {
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  font-family: "Shrikhand", sans-serif;
+  color: #101010;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  height: 63px;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+header p {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  height: 50px;
+  background-color: #EAEAEA;
+}
+.location p {
+  display: block;
+  font-weight: 500;
+  color: #353535;
+}
+.location i {
+  color: #353535;
+}
+
+.Réservez {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+.Réservez h1 {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+  width: 70%;
+  margin: 39.5px 0 0 0;
+  padding-bottom: 12px;
+}
+.Réservez p {
+  text-align: center;
+  width: 80%;
+  margin: 0 0 27.5px 0;
+}
+.Réservez a {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  border-radius: 25px;
+  padding: 0 20px;
+  margin-bottom: 57px;
+}
+
+/*# sourceMappingURL=style.css.map */
