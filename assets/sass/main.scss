@@ -19,6 +19,11 @@ $breakpoints: (
     flex-direction: column;
 }
 
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin button{
     display: flex;
     height: 50px;
@@ -29,15 +34,16 @@ $breakpoints: (
     background: linear-gradient(to top, $primary-color, $secondary-color);
     border-radius: 25px;
     padding: 0 20px;
+    box-shadow: 0px 4px 10px rgba(0,0, 0, 0.25);
 }
 
-@mixin tablet-only{
+@mixin tablet{
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }
 
-@mixin desktop-only{
+@mixin desktop{
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
     }
@@ -48,13 +54,12 @@ body{
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-family: 'Robot', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main-container {
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
     margin: 0;
     box-sizing: border-box;
 }
@@ -99,7 +104,7 @@ header{
     }
 }
 
-.Réservez{
+.reservez{
     @include flex-column;
     @include center;
     background-color: $background-color;
@@ -108,16 +113,101 @@ header{
         text-align: center;
         font-weight: 700;
         width: 70%;
-        margin: 39.5px 0 0 0;
-        padding-bottom: 12px;
+        margin: 37.5px 0 12px 0;
+        @include tablet{
+            margin-top: 30px;
+        }
+        @include desktop{
+            font-size: 40px;
+        }
     }
     p{
         text-align: center;
-        width: 80%;
+        width: 85%;
         margin: 0 0 27.5px 0;
+        font-size: 18px;
+        @include tablet{
+            margin-bottom: 18px;
+        }
     }
     a{
         @include button;
         margin-bottom: 57px;
+        @include tablet{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.fonctionnement{
+    @include flex-column;
+    @include desktop{
+        @include center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    &__title{
+        font-size: 24px;
+        margin: 48px 0px 26px 20px;
+        width: 100%;
+        @include desktop{
+            margin: 50px 0px 25px 0px;
+        }
+    }
+    ol{
+        counter-reset: list;
+        @include flex-column;
+        padding: 0;
+        gap: 25px;
+        margin: 0 20px 68px 32px;
+        @include tablet{
+            @include flex-row;
+        }
+        @include desktop{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        li{
+            list-style: none;
+            display: block;
+            @include flex-row;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: $background-color;
+            padding: 28px 24px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0,0, 0, 0.15);
+            @include tablet{
+                width: 100%;
+            }
+            @include desktop{
+                width: 100%;
+            }
+            .fa-mobile-screen-button{
+                margin-right: 3px;
+            }
+            .fa-store{
+                margin-right: -1px;
+                color: $primary-color;
+            }
+            &::before{
+                content: counter(list);
+                counter-increment: list;
+                display: flex;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: $primary-color;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                @include center;
+                position: relative;
+               margin-left: -36px;
+            }
+        }
     }
 }
