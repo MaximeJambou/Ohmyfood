@@ -1,0 +1,178 @@
+.location{
+    display: flex;
+    @include center;
+    gap: 17px;
+    height: 50px;
+    background-color: #EAEAEA;
+    p{
+        display: block;
+        font-weight: 500;
+        color: #353535;
+    }
+    i{
+        color: #353535;
+    }
+}
+
+.reservez{
+    @include flex-column;
+    @include center;
+    background-color: $background-color;
+    h1{
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+        width: 70%;
+        margin: 37.5px 0 12px 0;
+        @include tablet{
+            margin-top: 30px;
+        }
+        @include desktop{
+            font-size: 40px;
+        }
+    }
+    p{
+        text-align: center;
+        width: 85%;
+        margin: 0 0 27.5px 0;
+        font-size: 18px;
+        @include tablet{
+            margin-bottom: 18px;
+        }
+    }
+    a{
+        @include button;
+        margin-bottom: 57px;
+        @include tablet{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.fonctionnement{
+    @include flex-column;
+    @include desktop{
+        @include center;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    &__title{
+        font-size: 24px;
+        margin: 48px 0px 26px 20px;
+        width: 100%;
+        @include desktop{
+            margin: 50px 0px 25px 0px;
+        }
+    }
+    ol{
+        counter-reset: list;
+        @include flex-column;
+        padding: 0;
+        gap: 25px;
+        margin: 0 20px 68px 32px;
+        @include tablet{
+            @include flex-row;
+        }
+        @include desktop{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        li{
+            list-style: none;
+            display: block;
+            @include flex-row;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            background-color: $background-color;
+            padding: 28px 24px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0,0, 0, 0.15);
+            @include tablet{
+                width: 100%;
+            }
+            @include desktop{
+                width: 100%;
+            }
+            .fa-mobile-screen-button{
+                margin-right: 3px;
+            }
+            .fa-store{
+                margin-right: -1px;
+                color: $primary-color;
+            }
+            &::before{
+                content: counter(list);
+                counter-increment: list;
+                display: flex;
+                color: white;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: $primary-color;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                @include center;
+                position: relative;
+               margin-left: -36px;
+            }
+        }
+    }
+}
+
+.restaurants{
+    @include flex-column;
+    background-color: $background-color;
+
+    h2{
+       margin-left: 20px; 
+    }
+
+    .restaurants__cards{
+        @include flex-column;
+        gap: 10px;
+        margin-left: 14px;
+        margin-right: 15px;
+        
+        .card{
+            @include flex-column;
+            border-radius: 15px;
+            @include card-shadow;
+
+            
+
+            img{
+                width: 100%;
+                height: 179px;
+                object-fit: cover;
+                object-position: 0 62%;
+                border-radius: 15px 15px 0 0;
+    
+            }
+
+            .card__content{
+                height: 77px;
+                h3{
+                    font-size: 18px;
+                    color: black;
+                    margin: 16px 0 0 13px;
+                    font-weight: 700;
+                }
+                h3:first-letter {
+                    text-transform: capitalize;
+                  }
+
+                p{
+                    font-size: 17px;
+                    color: black;
+                    margin: 5px 0 0 13px;
+                    font-weight: 300;
+                }
+            }
+        }
+        
+    }
+}
+
