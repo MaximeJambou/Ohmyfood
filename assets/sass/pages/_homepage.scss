@@ -1,6 +1,7 @@
 .location{
     display: flex;
-    @include center;
+    justify-content: center;
+    align-items: center;
     gap: 17px;
     height: 50px;
     background-color: #EAEAEA;
@@ -16,7 +17,8 @@
 
 .reservez{
     @include flex-column;
-    @include center;
+    justify-content: center;
+    align-items: center;
     background-color: $background-color;
     h1{
         font-size: 24px;
@@ -53,8 +55,9 @@
 .fonctionnement{
     @include flex-column;
     @include desktop{
-        @include center;
-        width: 80%;
+        justify-content: center;
+        align-items: center;
+        width: 1000px;
         margin: 0 auto;
     }
     
@@ -89,7 +92,7 @@
             background-color: $background-color;
             padding: 28px 24px;
             border-radius: 20px;
-            box-shadow: 0px 4px 15px rgba(0,0, 0, 0.15);
+            @include drop-shadow;
             @include tablet{
                 width: 100%;
             }
@@ -114,7 +117,8 @@
                 border-radius: 50%;
                 width: 24px;
                 height: 24px;
-                @include center;
+                justify-content: center;
+                align-items: center;
                 position: relative;
                margin-left: -36px;
             }
@@ -122,26 +126,65 @@
     }
 }
 
-.restaurants{
-    @include flex-column;
+.restaurants-bg{
     background-color: $background-color;
+    
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    padding-bottom: 66px;
+        @include tablet{
+            padding-bottom: 30px;
+        }
+    @include desktop{
+        justify-content: center;
+        align-items: center;
+        width: 1020px;
+        margin: 0 auto;
+    }
 
     h2{
-       margin-left: 20px; 
+       margin: 54px 0 20px 20px; 
+       width: 100%;
+       @include tablet{
+            margin-top: 30px;
+       }
     }
 
     .restaurants__cards{
-        @include flex-column;
+        display: flex;
+        flex-direction: column;
         gap: 10px;
         margin-left: 14px;
         margin-right: 15px;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 100px;    
+        }
+        @include desktop{
+            margin-left: 7px;
+            margin-right: 7px;
+        }
         
+        .card3, .card4{
+            @include tablet{
+                margin-top: -50px;
+            }
+        }
+
         .card{
-            @include flex-column;
+            display: flex;
+            flex-direction: column;
             border-radius: 15px;
             @include card-shadow;
-
-            
+            position: relative;
+            @include tablet{
+                width: calc(50% - 50px);
+            }
 
             img{
                 width: 100%;
@@ -171,8 +214,32 @@
                     font-weight: 300;
                 }
             }
+
+            .card__heart{
+                position: absolute;
+                right: 33px;
+                bottom: 33px;
+            }
+
+            .new{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: auto;
+                font-size: 14px;
+                font-weight: 500;
+                height: 29px;
+                width: 80px;
+                color: #008766;
+                background-color: $tertiary-color;
+                position: absolute;
+                top: 21px;
+                right: 21px;
+                @include drop-shadow;
+            }
         }
         
     }
 }
+
 

@@ -3,7 +3,8 @@ header{
     font-family: "Shrikhand", sans-serif;
     color: $title-color;
     font-size: 30px;
-    @include center;
+    justify-content: center;
+    align-items: center;
     height: 63px;
     position: relative;
     z-index: 1;
