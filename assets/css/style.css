@@ -334,9 +334,6 @@ footer ul .fa-handshake-angle {
   object-position: 0 62%;
   border-radius: 15px 15px 0 0;
 }
-.restaurants .restaurants__cards .card .card__content {
-  height: 77px;
-}
 .restaurants .restaurants__cards .card .card__content h3 {
   font-size: 18px;
   color: black;
@@ -349,13 +346,16 @@ footer ul .fa-handshake-angle {
 .restaurants .restaurants__cards .card .card__content p {
   font-size: 17px;
   color: black;
-  margin: 5px 0 0 13px;
+  margin: 5px 0 12px 13px;
   font-weight: 300;
 }
 .restaurants .restaurants__cards .card .card__heart {
   position: absolute;
-  right: 33px;
+  right: 25px;
   bottom: 33px;
+}
+.restaurants .restaurants__cards .card .card__heart .fa-heart {
+  font-size: 21px;
 }
 .restaurants .restaurants__cards .card .new {
   display: flex;
@@ -383,28 +383,52 @@ footer ul .fa-handshake-angle {
 
 .img-restaurant {
   width: 100%;
-  height: 275px;
+  height: 252px;
   object-fit: cover;
   object-position: 0 60%;
   position: relative;
   z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .img-restaurant {
+    height: 374px;
+  }
 }
 
 .restaurant__container {
   display: flex;
   flex-direction: column;
   background-color: #F6F6F6;
-  margin-top: -32px;
+  margin: -32px auto 0;
   padding: 32px 13px 40px 13px;
   border-radius: 40px 40px 0 0;
+  max-width: 1055px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__container {
+    width: 90%;
+    padding: 32px 0 40px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__container {
+    width: 85%;
+  }
 }
 
 .restaurant__title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0 4px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__title {
+    justify-content: center;
+    margin: 0;
+  }
 }
 .restaurant__title h1 {
   display: block;
@@ -413,11 +437,24 @@ footer ul .fa-handshake-angle {
   font-family: "Shrikhand", sans-serif;
   font-weight: 400;
 }
+@media screen and (min-width: 768px) {
+  .restaurant__title h1 {
+    margin-right: 24px;
+  }
+}
 .restaurant__title .card__heart {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 26px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant__title .card__heart {
+    margin: 0;
+  }
+}
+.restaurant__title .card__heart .fa-heart {
+  font-size: 21px;
 }
 
 .menu {
@@ -425,12 +462,20 @@ footer ul .fa-handshake-angle {
   flex-direction: column;
   background-color: #F6F6F6;
   gap: 12px;
-  margin: 40px 0;
+  margin: 0;
+  padding: 40px 0;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 60%;
+    margin: auto;
+  }
 }
 .menu__title {
   font-size: 16px;
   font-weight: 300;
   margin: 0;
+  text-transform: uppercase;
 }
 .menu__title::after {
   content: "";
@@ -461,7 +506,7 @@ footer ul .fa-handshake-angle {
 }
 .menu__meal span {
   position: absolute;
-  right: 13.5px;
+  right: 15px;
   bottom: 13.5px;
   font-size: 15px;
   font-weight: 700;

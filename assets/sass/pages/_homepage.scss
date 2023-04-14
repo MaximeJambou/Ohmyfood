@@ -196,7 +196,7 @@
             }
 
             .card__content{
-                height: 77px;
+                
                 h3{
                     font-size: 18px;
                     color: black;
@@ -210,15 +210,18 @@
                 p{
                     font-size: 17px;
                     color: black;
-                    margin: 5px 0 0 13px;
+                    margin: 5px 0 12px 13px;
                     font-weight: 300;
                 }
             }
 
             .card__heart{
                 position: absolute;
-                right: 33px;
+                right: 25px;
                 bottom: 33px;
+                .fa-heart{
+                    font-size: 21px;
+                }
             }
 
             .new{
