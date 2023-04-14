@@ -1,0 +1,107 @@
+.fa-arrow-left{
+    font-size: 16px;
+    position: absolute;
+    left: 23px;
+    top: 24px;
+}
+
+.img-restaurant{
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: 0 60%;
+    position: relative;
+    z-index: -1;
+}
+
+.restaurant__container{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    margin-top: -32px;
+    padding: 32px 13px 40px 13px;
+    border-radius: 40px 40px 0 0;
+
+}
+
+.restaurant__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 4px;
+
+    h1{
+        display: block;
+        margin: 0;
+        font-size: 28px;
+        font-family: "Shrikhand", sans-serif;
+        font-weight: 400;        
+    }
+
+    .card__heart{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 26px;
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    gap: 12px;
+    margin: 40px 0;
+
+    &__title{
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__title::after{
+        content: '';
+        width: 40px;
+        height: 3px;
+        display: flex;
+        margin-top: 5px;
+        background-color: $tertiary-color;
+    }
+
+    &__meal{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        @include card-shadow;
+        border-radius: 15px;
+        position: relative;
+
+        h3{
+            font-size: 18px;
+            font-weight: 500;
+            margin: 12px 0 5px 15px;
+        }
+
+        p{
+            font-size: 15px;
+            font-weight: 300;
+            margin: 0px 0 12px 15px;
+        }
+
+        span{
+            position: absolute;
+            right: 13.5px;
+            bottom: 13.5px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+}
+
+.commander{
+    margin: 0 auto;
+    width: 186px;
+    @include button;
+}
