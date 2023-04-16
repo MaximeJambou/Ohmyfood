@@ -57,6 +57,10 @@
         }        
     }
 
+    h1:first-letter {
+        text-transform: capitalize;
+      }
+
     .card__heart{
         display: flex;
         justify-content: center;
