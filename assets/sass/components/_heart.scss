@@ -1,0 +1,49 @@
+.card__heart {
+    width: 22px;
+    height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        width: 22px;
+        height: 21px;
+        display: flex;
+        font-size: 21px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .fa-regular {
+        transform: scale(1);
+        transition-delay: 0.3s;
+    }
+
+    .fa-solid {
+        margin-bottom: -1px;
+        background-image: linear-gradient(to top, $primary-color, $secondary-color);
+        color: transparent;
+        -webkit-background-clip: text;
+        font-size: 5.25px;
+        opacity: 0;
+        transition: 2s;
+    }
+}
+
+.card__heart:hover {
+    .fa-regular {
+        transform: scale(0); 
+        transition-delay: 0.7s;
+        
+        
+    }
+
+    .fa-solid {
+        transform: scale(4);
+        opacity: 1;
+        transition: 1s;
+        transition-timing-function: ease-out;
+    }
+}
