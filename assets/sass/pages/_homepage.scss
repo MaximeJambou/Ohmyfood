@@ -16,7 +16,8 @@
 }
 
 .reservez{
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $background-color;
@@ -57,7 +58,8 @@
 
 
 .fonctionnement{
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     @include desktop{
         justify-content: center;
         align-items: center;
@@ -75,12 +77,13 @@
     }
     ol{
         counter-reset: list;
-        @include flex-column;
+        display: flex;
+        flex-direction: column;
         padding: 0;
         gap: 25px;
         margin: 0 20px 68px 32px;
         @include tablet{
-            @include flex-row;
+            flex-direction: row;
         }
         @include desktop{
             width: 100%;
@@ -89,7 +92,8 @@
         li{
             list-style: none;
             display: block;
-            @include flex-row;
+            display: flex;
+            flex-direction: row;
             gap: 20px;
             font-size: 16px;
             font-weight: 500;

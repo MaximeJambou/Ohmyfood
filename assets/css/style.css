@@ -206,7 +206,6 @@ footer ul .fa-handshake-angle {
 }
 @media screen and (min-width: 768px) {
   .fonctionnement ol {
-    display: flex;
     flex-direction: row;
   }
 }
@@ -522,11 +521,17 @@ footer ul .fa-handshake-angle {
   font-size: 18px;
   font-weight: 500;
   margin: 12px 0 5px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__meal p {
   font-size: 15px;
   font-weight: 300;
   margin: 0px 0 12px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu__meal span {
   position: absolute;

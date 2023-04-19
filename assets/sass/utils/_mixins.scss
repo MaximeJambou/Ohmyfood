@@ -1,22 +1,8 @@
-@mixin center{
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin flex-column{
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin flex-row{
-    display: flex;
-    flex-direction: row;
-}
-
 @mixin button{
     display: flex;
     height: 50px;
-    @include center;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     color: white;
     font-weight: 500;
@@ -31,6 +17,16 @@
     box-shadow: 0px 4px 20px rgba(0,0, 0, 0.5);
 }
 
+
+
+@mixin card-shadow{
+    box-shadow: 0px 4px 15px rgba(0,0, 0, 0.1);
+}
+
+@mixin drop-shadow{
+    box-shadow: 0px 4px 15px rgba(0,0, 0, 0.15);
+}
+
 @mixin tablet{
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
@@ -42,12 +38,3 @@
         @content;
     }
 }
-
-@mixin card-shadow{
-    box-shadow: 0px 4px 15px rgba(0,0, 0, 0.1);
-}
-
-@mixin drop-shadow{
-    box-shadow: 0px 4px 15px rgba(0,0, 0, 0.15);
-}
-
