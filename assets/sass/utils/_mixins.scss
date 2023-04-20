@@ -38,3 +38,9 @@
         @content;
     }
 }
+
+@mixin fontAwesome ($content: '') {
+    content: $content;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}

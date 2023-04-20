@@ -1,9 +1,11 @@
 @import "../sass/utils/variables";
 @import "../sass/utils/mixins";
+@import "../sass/utils/keyframes";
 
 @import "../sass/base/base";
 @import "../sass/layouts/header";
 @import "../sass/layouts/footer";
+@import "../sass/layouts/loader";
 
 @import "../sass/pages/homepage";
 @import "../sass/pages/restaurants";
@@ -11,5 +13,5 @@
 @import "../sass/components/heart";
 
 
-
+@import "../sass/pages/test"
 
