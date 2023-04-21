@@ -1,9 +1,11 @@
 @keyframes opacity {
   0% {
     opacity: 0;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes loader {
@@ -22,7 +24,7 @@
 body {
   display: flex;
   justify-content: center;
-  min-width: 340px;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
@@ -270,11 +272,13 @@ footer ul .fa-handshake-angle {
   display: block;
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
   font-size: 16px;
   font-weight: 500;
   background-color: #F6F6F6;
-  padding: 28px 24px;
+  height: 72px;
+  padding: 0 24px;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -306,6 +310,7 @@ footer ul .fa-handshake-angle {
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  min-width: 24px;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -516,7 +521,7 @@ footer ul .fa-handshake-angle {
   gap: 12px;
   margin: 0;
   padding: 40px 0;
-  animation: opacity 3s both;
+  animation: opacity 4s both ease-out;
 }
 .menu:nth-child(1) {
   animation-delay: 0.4s;
@@ -625,7 +630,7 @@ footer ul .fa-handshake-angle {
   transition-delay: 0.3s;
 }
 .card__heart .fa-solid {
-  margin-bottom: -1px;
+  margin-bottom: -8px;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   color: transparent;
   -webkit-background-clip: text;
@@ -694,7 +699,6 @@ footer ul .fa-handshake-angle {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f058";
-  color: red;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   transition: 0.7s;

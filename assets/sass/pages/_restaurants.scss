@@ -78,14 +78,12 @@
     gap: 12px;
     margin: 0;
     padding: 40px 0;
-
+    animation: opacity 4s both ease-out;
     @for $i from 1 through 4 {
         &:nth-child(#{$i}){
             animation-delay: 0.4s*$i;
         }
     }
-    animation: opacity 3s both;
-
     @include tablet{
         width: 60%;
         margin: auto;
@@ -154,6 +152,6 @@
     width: 186px;
     @include button;
     &:hover{
-        @include button-hover
+        @include hover-shadow
     }
 }
