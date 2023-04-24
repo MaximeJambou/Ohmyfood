@@ -52,8 +52,7 @@
         &:hover {
             @include hover-shadow;
         }
-    }
-    
+    }    
 }
 
 
@@ -197,22 +196,18 @@
             @include tablet{
                 width: calc(50% - 50px);
             }
-
             img{
                 width: 100%;
                 height: 179px;
                 object-fit: cover;
                 object-position: 0 62%;
                 border-radius: 15px 15px 0 0;
-    
             }
-
             &:hover{
                 @include hover-shadow
             }
 
             .card__content{
-                
                 h3{
                     font-size: 18px;
                     color: black;
@@ -254,8 +249,7 @@
                 right: 21px;
                 @include drop-shadow;
             }
-        }
-        
+        }   
     }
 }
 

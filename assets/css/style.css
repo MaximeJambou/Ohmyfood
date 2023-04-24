@@ -644,13 +644,18 @@ footer ul .fa-handshake-angle {
 .menu__meal {
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #fff;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   position: relative;
 }
-.menu__meal h3 {
+.menu__meal--name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__meal--name h3 {
   font-size: 18px;
   font-weight: 500;
   margin: 12px 0 5px 15px;
@@ -658,7 +663,7 @@ footer ul .fa-handshake-angle {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__meal p {
+.menu__meal--name p {
   font-size: 15px;
   font-weight: 300;
   margin: 0px 0 12px 15px;
@@ -666,12 +671,34 @@ footer ul .fa-handshake-angle {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__meal span {
-  position: absolute;
-  right: 15px;
-  bottom: 13.5px;
+.menu__meal--price {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+}
+.menu__meal--price span {
   font-size: 15px;
   font-weight: 700;
+  padding: 0 15px 13.5px 0;
+}
+.menu__meal--price::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  height: 69px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f058";
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transition: 0.7s;
+  color: white;
+  font-size: 0;
+}
+.menu__meal:hover .menu__meal--price::after {
+  width: 69px;
+  font-size: 20px;
 }
 
 .commander {
@@ -734,67 +761,6 @@ footer ul .fa-handshake-angle {
   opacity: 1;
   transition: 1s;
   transition-timing-function: ease-out;
-}
-
-.tmenu__meal {
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  background-color: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  position: relative;
-}
-.tmenu__meal--name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tmenu__meal--name h3 {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 12px 0 5px 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tmenu__meal--name p {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 0px 0 12px 15px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tmenu__meal--price {
-  margin-left: auto;
-  display: flex;
-  align-items: flex-end;
-}
-.tmenu__meal--price span {
-  font-size: 15px;
-  font-weight: 700;
-  padding: 0 15px 13.5px 0;
-}
-.tmenu__meal--price::after {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 0px;
-  height: 69px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f058";
-  background-color: #99E2D0;
-  border-radius: 0 15px 15px 0;
-  transition: 0.7s;
-  color: white;
-  font-size: 0;
-}
-
-.tmenu__meal:hover .tmenu__meal--price::after {
-  width: 69px;
-  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
