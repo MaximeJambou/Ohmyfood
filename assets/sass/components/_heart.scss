@@ -22,7 +22,7 @@
     }
 
     .fa-solid {
-        margin-bottom: -8px;
+        margin-bottom: -1px;
         background-image: linear-gradient(to top, $primary-color, $secondary-color);
         color: transparent;
         -webkit-background-clip: text;
@@ -35,9 +35,7 @@
 .card__heart:hover {
     .fa-regular {
         transform: scale(0); 
-        transition-delay: 0.7s;
-        
-        
+        transition-delay: 0.7s;   
     }
 
     .fa-solid {

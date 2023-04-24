@@ -1,7 +1,7 @@
-@keyframes opacity {
+@keyframes menu-appear {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(80px);
   }
   100% {
     opacity: 1;
@@ -13,11 +13,41 @@
     transform: scale(1);
   }
   70% {
+    border-radius: 0px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  80% {
     transform: scale(1);
     rotate: 0deg;
   }
   100% {
     transform: scale(0);
+    rotate: 360deg;
+    border-radius: 50%;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+  }
+}
+@keyframes opacity {
+  0% {
+    transform: scale(0);
+    rotate: 0deg;
+  }
+  100% {
+    rotate: -360deg;
+    transform: scale(1);
+  }
+}
+@keyframes tourne-et-retourne {
+  0% {
+    transform: scale(0);
+    rotate: 0deg;
+  }
+  100% {
+    transform: scale(1);
     rotate: 360deg;
   }
 }
@@ -28,6 +58,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 .main-container {
@@ -122,16 +153,32 @@ footer ul .fa-handshake-angle {
 }
 
 .loader {
-  position: fixed;
-  z-index: 2;
-  background-color: #99E2D0;
-  opacity: 0.95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
   width: 100%;
   height: 100%;
-  animation: loader 3s ease-in-out forwards;
+  margin: 0;
+  position: fixed;
+  z-index: 2;
+  background-color: white;
+  opacity: 0.95;
+  animation: loader 4s ease-in-out forwards;
+}
+.loader__container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border: 12px solid #99E2D0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgb(0, 135, 102);
+  animation: opacity 2.6s;
 }
 .loader__content {
   display: flex;
@@ -140,14 +187,52 @@ footer ul .fa-handshake-angle {
   align-items: center;
   gap: 20px;
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
+  font-size: 16px;
   color: white;
+  border: 10px solid #FF79DA;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(to top, #9356DC, #FF79DA);
-  width: 250px;
-  height: 250px;
+  width: 70%;
+  height: 70%;
   border-radius: 50%;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.loader__content i {
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.loader__content span {
+  animation: tourne-et-retourne 1s ease-out;
+}
+.loader__content span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.loader__content span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.loader__content span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.loader__content span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.loader__content span:nth-child(5) {
+  animation-delay: 1s;
+}
+.loader__content span:nth-child(6) {
+  animation-delay: 1.2s;
+}
+.loader__content span:nth-child(7) {
+  animation-delay: 1.4s;
+}
+.loader__content span:nth-child(8) {
+  animation-delay: 1.6s;
+}
+.loader__content span:nth-child(9) {
+  animation-delay: 1.8s;
 }
 
 .location {
@@ -429,6 +514,7 @@ footer ul .fa-handshake-angle {
   color: #008766;
   background-color: #99E2D0;
   position: absolute;
+  border-radius: 2px;
   top: 21px;
   right: 21px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
@@ -521,19 +607,19 @@ footer ul .fa-handshake-angle {
   gap: 12px;
   margin: 0;
   padding: 40px 0;
-  animation: opacity 4s both ease-out;
+  animation: menu-appear 1s both ease-out;
 }
 .menu:nth-child(1) {
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 .menu:nth-child(2) {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 .menu:nth-child(3) {
-  animation-delay: 1.2s;
+  animation-delay: 0.9s;
 }
 .menu:nth-child(4) {
-  animation-delay: 1.6s;
+  animation-delay: 1.2s;
 }
 @media screen and (min-width: 768px) {
   .menu {
@@ -630,7 +716,7 @@ footer ul .fa-handshake-angle {
   transition-delay: 0.3s;
 }
 .card__heart .fa-solid {
-  margin-bottom: -8px;
+  margin-bottom: -1px;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   color: transparent;
   -webkit-background-clip: text;
