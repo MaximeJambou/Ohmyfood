@@ -19,36 +19,30 @@
     height: 100%;
   }
   80% {
-    transform: scale(1);
-    rotate: 0deg;
+    transform: scale(1) rotate(0deg);
   }
   100% {
-    transform: scale(0);
-    rotate: 360deg;
+    transform: scale(0) rotate(360deg);
     border-radius: 50%;
     align-items: center;
     width: 250px;
     height: 250px;
   }
 }
-@keyframes opacity {
+@keyframes loader-appear {
   0% {
-    transform: scale(0);
-    rotate: 0deg;
+    transform: scale(0) rotate(0deg);
   }
   100% {
-    rotate: -360deg;
-    transform: scale(1);
+    transform: scale(1) rotate(-360deg);
   }
 }
-@keyframes tourne-et-retourne {
+@keyframes ohmyfood-appear {
   0% {
     transform: scale(0);
-    rotate: 0deg;
   }
   100% {
     transform: scale(1);
-    rotate: 360deg;
   }
 }
 body {
@@ -178,7 +172,7 @@ footer ul .fa-handshake-angle {
   border: 12px solid #99E2D0;
   border-radius: 50%;
   box-shadow: 0px 0px 10px rgb(0, 135, 102);
-  animation: opacity 2.6s;
+  animation: loader-appear 2.6s;
 }
 .loader__content {
   display: flex;
@@ -205,7 +199,7 @@ footer ul .fa-handshake-angle {
   -webkit-background-clip: text;
 }
 .loader__content span {
-  animation: tourne-et-retourne 1s ease-out;
+  animation: ohmyfood-appear 1s ease-out;
 }
 .loader__content span:nth-child(1) {
   animation-delay: 0.2s;
@@ -243,7 +237,7 @@ footer ul .fa-handshake-angle {
   height: 50px;
   background-color: #EAEAEA;
 }
-.location p {
+.location h2 {
   display: block;
   font-weight: 500;
   color: #353535;
