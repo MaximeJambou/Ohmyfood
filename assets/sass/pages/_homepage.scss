@@ -15,7 +15,7 @@
     }
 }
 
-.reservez{
+.book{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,7 +56,7 @@
 }
 
 
-.fonctionnement{
+.functionning{
     display: flex;
     flex-direction: column;
     @include desktop{

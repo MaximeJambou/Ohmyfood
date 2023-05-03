@@ -60,6 +60,7 @@ body {
   width: 100%;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 a {
@@ -246,14 +247,14 @@ footer ul .fa-handshake-angle {
   color: #353535;
 }
 
-.reservez {
+.book {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #F6F6F6;
 }
-.reservez h1 {
+.book h1 {
   font-size: 24px;
   text-align: center;
   font-weight: 700;
@@ -261,27 +262,27 @@ footer ul .fa-handshake-angle {
   margin: 37.5px 0 12px 0;
 }
 @media screen and (min-width: 768px) {
-  .reservez h1 {
+  .book h1 {
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .reservez h1 {
+  .book h1 {
     font-size: 40px;
   }
 }
-.reservez p {
+.book p {
   text-align: center;
   width: 85%;
   margin: 0 0 27.5px 0;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
-  .reservez p {
+  .book p {
     margin-bottom: 18px;
   }
 }
-.reservez a {
+.book a {
   display: flex;
   height: 50px;
   align-items: center;
@@ -296,38 +297,38 @@ footer ul .fa-handshake-angle {
   margin-bottom: 57px;
 }
 @media screen and (min-width: 768px) {
-  .reservez a {
+  .book a {
     margin-bottom: 30px;
   }
 }
-.reservez a:hover {
+.book a:hover {
   opacity: 0.9;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.fonctionnement {
+.functionning {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionnement {
+  .functionning {
     justify-content: center;
     align-items: center;
     width: 1000px;
     margin: 0 auto;
   }
 }
-.fonctionnement__title {
+.functionning__title {
   font-size: 24px;
   margin: 48px 0px 26px 20px;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .fonctionnement__title {
+  .functionning__title {
     margin: 50px 0px 25px 0px;
   }
 }
-.fonctionnement ol {
+.functionning ol {
   counter-reset: list;
   display: flex;
   flex-direction: column;
@@ -336,17 +337,17 @@ footer ul .fa-handshake-angle {
   margin: 0 20px 68px 32px;
 }
 @media screen and (min-width: 768px) {
-  .fonctionnement ol {
+  .functionning ol {
     flex-direction: row;
   }
 }
 @media screen and (min-width: 1024px) {
-  .fonctionnement ol {
+  .functionning ol {
     width: 100%;
     margin-bottom: 50px;
   }
 }
-.fonctionnement ol li {
+.functionning ol li {
   list-style: none;
   display: block;
   display: flex;
@@ -362,23 +363,23 @@ footer ul .fa-handshake-angle {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
 @media screen and (min-width: 768px) {
-  .fonctionnement ol li {
+  .functionning ol li {
     width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
-  .fonctionnement ol li {
+  .functionning ol li {
     width: 100%;
   }
 }
-.fonctionnement ol li .fa-mobile-screen-button {
+.functionning ol li .fa-mobile-screen-button {
   margin-right: 3px;
 }
-.fonctionnement ol li .fa-store {
+.functionning ol li .fa-store {
   margin-right: -1px;
   color: #9356DC;
 }
-.fonctionnement ol li::before {
+.functionning ol li::before {
   content: counter(list);
   counter-increment: list;
   display: flex;
@@ -695,7 +696,7 @@ footer ul .fa-handshake-angle {
   font-size: 20px;
 }
 
-.commander {
+.order {
   margin: 0 auto;
   width: 186px;
   display: flex;
@@ -710,7 +711,7 @@ footer ul .fa-handshake-angle {
   padding: 0 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
-.commander:hover {
+.order:hover {
   opacity: 0.9;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
 }
